@@ -1,0 +1,387 @@
+$color_1: #fff;
+$color_2: #b69f9f;
+$color_3: rgb(240, 231, 219);
+$color_4: rgb(191, 195, 201);
+$color_5: rgb(0, 0, 0);
+$font-family_1: 'Montserrat', sans-serif;
+$font-family_2: 'Poppins', sans-serif;
+$font-size_1:20px;
+$fonta-size_2:25px;
+$font-size-3:10px;
+$font-weight_4:bold;
+$background-color_1:rgb(0, 0, 0); 
+$background-color_2: rgb(132, 180, 164);
+$background-color_3: rgb(218, 214, 214);
+$background-color_4: #b69f9f;
+$text-align_1:center;
+@mixin mobile{
+    @media screen and (max-width: 320px) {
+        @content
+    }
+}
+@mixin img{
+    background-position: center;
+    background-size: cover;
+}
+
+@import "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Montserrat:wght@300&family=Poppins:wght@200&family=Roboto+Condensed:ital@0;1&family=Roboto:ital,wght@0,300;0,400;0,900;1,400&display=swap";
+/*font-family: 'Bricolage Grotesque', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
+* {
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: $background-color_1;
+	height: 80px;
+	width: 100%;
+	font-size: 25px;
+}
+/*barranav inicia*/
+.navbar-brand {
+	color: $color_1;
+	float: left;
+	padding: 20px;
+	font-family: $font-family_1;
+}
+
+.navbar-collapse {
+	justify-content: end;
+	display: flex !important;
+	a {
+		&:hover {
+			color: $color_2 !important;
+		}
+	}
+}
+.nav-item {
+	display: flex;
+	align-items: flex-end;
+}
+.nav-link {
+	font-size: $font-size_1 !important;
+	color: $color_1;
+	text-decoration: none;
+	text-align: none;
+	font-size: $font-size_1;
+	font-family: $font-family_1;
+	padding: 10px;
+}
+.navbar-brand{
+    font-size: $font-family_1;
+    font-family: $font-family_1;
+    text-shadow: 5px 5px 5px rgb(145, 143, 143)
+}
+/*fin barranav*/
+/*main*/
+main {
+    @include img;
+	background-image: url(img/img.faro.jpg);
+	height: 100vh;
+	
+}
+h1 {
+	text-align: $text-align_1;
+	padding-top: 20%;
+	font-family: $font-family_2;
+}
+p {
+	text-align: $text-align_1;
+	padding: 20px;
+	margin-bottom: 20px;
+	font-family: $font-family_1;
+}
+@include mobile() {
+    main{
+        background-color:#466b64;
+        background-image: linear-gradient(90deg, #466b64 0%, #9FACE6 50%, #276082 100%);
+        
+        h1{
+            padding-top: 200px;
+            font-size: 35px;
+            font-weight: $font-weight_4;
+        }
+        p{
+            padding-top: 250px;
+            font-weight: $font-weight_4;
+        }
+        
+}}
+/*fin main*/
+/*footer*/
+footer {
+	background-color: $background-color_1;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	bottom: 0%;
+	p {
+		color: $color_1;
+	}
+}
+.span {
+	color: $color_4;
+}
+.mp {
+	float: inline-end;
+	font-size: 15px;
+	a {
+		color: $color_1;
+		text-decoration: none;
+		font-family: $font-family_1;
+		padding-top: 50px;
+		margin-right: 10px;
+	}
+}
+@include mobile() {
+    footer p{
+        font-size: $font-size-3;
+        }
+        .span{
+            font-size: $font-size-3;
+        }
+}
+/*fin footer*/
+/*body*/
+body {
+    @include img;
+	background-color: $background-color_2;
+	height: 100vh;
+	
+}
+/*fin body*/
+/*inicio*/
+
+.xleft {
+	text-align: left;
+}
+.h2 {
+	text-align: left;
+	text-decoration: none;
+	font-size: $font-size_1;
+	font-family: $font-family_2;
+	margin-left: 20px;
+	margin-top: 25px;
+}
+.p2 {
+	display: flex;
+	background-color: $background-color_3;
+}
+.contenedor{
+	grid-gap: 10px;
+	padding: auto;
+	height: 800px;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 200px);
+	grid-template-areas: " img1 img1 img2 img2" "img3 img3 img2 img2" "img3 img3 img4 img4";
+    
+}
+.img {
+	@include img;
+	border-radius: 7px;
+	grid-gap: 10px;
+    
+    
+}
+.img:hover {filter: grayscale(80%);}
+.img1 {
+	background-image: url(img/img.montaña.jpg);
+	justify-content: center;
+	grid-area: img1;
+}
+.img2 {
+	background-image: url(img/img.cordoba.jpg);
+	justify-content: center;
+	grid-area: img2;
+}
+.img3 {
+	background-image: url(img/img.faro.jpg);
+	justify-content: center;
+	grid-area: img3;
+}
+.img4 {
+	background-image: url(img/img.lobos.jpg);
+	justify-content: center;
+	grid-area: img4;
+}
+@include mobile() {
+    img{
+        display: grid;
+    }
+    .img1{
+        grid-column: 1/5;
+        grid-row: 1/1;
+    }
+    .img2{
+        grid-column: 1/5;
+        grid-row: 2/2;
+    }
+    .img3{
+        grid-column:1/5 ;
+        grid-row: 3/3;
+    }
+    .img4{
+        grid-column: 1/5;
+        grid-row: 4/4;
+    }
+}
+/*destinos*/
+.dest1 {
+	font-size: 35px;
+	font-family: $font-family_2;
+	background-color: $background-color_3;
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-right: 18%;
+}
+.container {
+	mt-4 {
+		background-color: $background-color_2;
+		padding-bottom: 20%;
+	}
+}
+.img-thumbnail:hover {filter: grayscale(80%);}
+
+/*fin destinos*/
+/*reservas*/
+.rev {
+	background-color: $background-color_3;
+	font-family: $font-family_1;
+	text-align: $text-align_1;
+}
+.card {
+	@include img;
+    height: 400px;
+    background-color: $background-color_4;
+	margin-top: 5%;
+	margin-left: 20px;
+	padding: 20px;
+    padding-bottom: 10px;
+	display: grid;
+	grid: gap 20px;
+	border-radius: 3px;
+}
+.card-title {
+	text-align: $text-align_1;
+	font-family: $font-family_2;
+	font-size: $fonta-size_2;
+	font-weight: bold;
+}
+.card-text {
+	text-align: $text-align_1;
+	font-size: $fonta-size_2;
+	font-family: $font-family_1;
+}
+.btn {
+    margin-bottom: 70px;
+	color: $color_1;
+	background-color: $background-color_1;
+    justify-content: center;
+}
+@include mobile() {
+    .card{
+        height: 380px;
+    }
+    .btn{
+        font-size: 9px;
+    }
+}
+/*fin reservas*/
+/*grupos*/
+.grup {
+	text-align: $text-align_1;
+	color: $color_5;
+	background-color: $background-color_3;
+	font-family: $font-family_1;
+}
+.left {
+    @include img;
+	background-image: url(img/img.grupo.jpg);
+	width: 460px;
+	height: 330px;
+	margin-bottom: 35px;
+	margin-left: 10px;
+}
+h3 {
+	text-align: $text-align_1;
+	font-family: $font-family_2;
+	font-size: $fonta-size_2;
+}
+.dg {
+	text-align: $text-align_1;
+	font-size: $fonta-size_2;
+	font-family: $font-family_1;
+}
+.container-fluid-footer {
+	background-color: $background-color_1;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	bottom: 0%;
+	font-family: $font-family_1;
+}
+@include mobile() {
+    .left{
+        width: 300px;
+        height: 280px;
+    }
+    .dg{
+        font-size: 18px;
+        font-weight: $font-weight_4;
+    }
+}
+/*fin reservas*/
+/*contacto*/
+.form {
+	font-size: $fonta-size_2;
+	font-family: $font-family_2;
+	background-color: $background-color_3;
+}
+.contacto {
+	h4 {
+		background-color: $background-color_3;
+		text-decoration: none;
+		font-size: 15px;
+		font-family: $font-family_1;
+		letter-spacing: 5px;
+		padding-bottom: 50px;
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+textarea {
+	width: 450px;
+	height: 200px;
+}
+.redes-container {
+	padding-bottom: 100px;
+	display: flex;
+	justify-content: space-around;
+}
+.b {
+	padding: 7px;
+	font-size: 35px;
+	border-radius: 5px;
+	justify-content: space-between;
+	background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+}
+@include mobile() {
+    #h{
+        width: 280px;
+    }
+    iframe{
+        width: 500px;
+        height: 200px;
+    }
+    .redes-container{
+        padding-bottom: 50px;
+    }
+}
+/*fin contacto*/

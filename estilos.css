@@ -1,0 +1,398 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Montserrat:wght@300&family=Poppins:wght@200&family=Roboto+Condensed:ital@0;1&family=Roboto:ital,wght@0,300;0,400;0,900;1,400&display=swap";
+/*font-family: 'Bricolage Grotesque', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  height: 80px;
+  width: 100%;
+  font-size: 25px;
+}
+
+/*barranav inicia*/
+.navbar-brand {
+  color: #fff;
+  float: left;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-collapse {
+  justify-content: end;
+  display: flex !important;
+}
+.navbar-collapse a:hover {
+  color: #b69f9f !important;
+}
+
+.nav-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-link {
+  font-size: 20px !important;
+  color: #fff;
+  text-decoration: none;
+  text-align: none;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 5px 5px 5px rgb(145, 143, 143);
+}
+
+/*fin barranav*/
+/*main*/
+main {
+  background-position: center;
+  background-size: cover;
+  background-image: url(img/img.faro.jpg);
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20%;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    background-color: #466b64;
+    background-image: linear-gradient(90deg, #466b64 0%, #9FACE6 50%, #276082 100%);
+  }
+  main h1 {
+    padding-top: 200px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  main p {
+    padding-top: 250px;
+    font-weight: bold;
+  }
+}
+/*fin main*/
+/*footer*/
+footer {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0%;
+}
+footer p {
+  color: #fff;
+}
+
+.span {
+  color: rgb(191, 195, 201);
+}
+
+.mp {
+  float: inline-end;
+  font-size: 15px;
+}
+.mp a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 50px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  footer p {
+    font-size: 10px;
+  }
+  .span {
+    font-size: 10px;
+  }
+}
+/*fin footer*/
+/*body*/
+body {
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(132, 180, 164);
+  height: 100vh;
+}
+
+/*fin body*/
+/*inicio*/
+.xleft {
+  text-align: left;
+}
+
+.h2 {
+  text-align: left;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.p2 {
+  display: flex;
+  background-color: rgb(218, 214, 214);
+}
+
+.contenedor {
+  grid-gap: 10px;
+  padding: auto;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  grid-template-areas: " img1 img1 img2 img2" "img3 img3 img2 img2" "img3 img3 img4 img4";
+}
+
+.img {
+  background-position: center;
+  background-size: cover;
+  border-radius: 7px;
+  grid-gap: 10px;
+}
+
+.img:hover {
+  filter: grayscale(80%);
+}
+
+.img1 {
+  background-image: url(img/img.montaña.jpg);
+  justify-content: center;
+  grid-area: img1;
+}
+
+.img2 {
+  background-image: url(img/img.cordoba.jpg);
+  justify-content: center;
+  grid-area: img2;
+}
+
+.img3 {
+  background-image: url(img/img.faro.jpg);
+  justify-content: center;
+  grid-area: img3;
+}
+
+.img4 {
+  background-image: url(img/img.lobos.jpg);
+  justify-content: center;
+  grid-area: img4;
+}
+
+@media screen and (max-width: 320px) {
+  img {
+    display: grid;
+  }
+  .img1 {
+    grid-column: 1/5;
+    grid-row: 1/1;
+  }
+  .img2 {
+    grid-column: 1/5;
+    grid-row: 2/2;
+  }
+  .img3 {
+    grid-column: 1/5;
+    grid-row: 3/3;
+  }
+  .img4 {
+    grid-column: 1/5;
+    grid-row: 4/4;
+  }
+}
+/*destinos*/
+.dest1 {
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(218, 214, 214);
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-right: 18%;
+}
+
+.container mt-4 {
+  background-color: rgb(132, 180, 164);
+  padding-bottom: 20%;
+}
+
+.img-thumbnail:hover {
+  filter: grayscale(80%);
+}
+
+/*fin destinos*/
+/*reservas*/
+.rev {
+  background-color: rgb(218, 214, 214);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.card {
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  background-color: #b69f9f;
+  margin-top: 5%;
+  margin-left: 20px;
+  padding: 20px;
+  padding-bottom: 10px;
+  display: grid;
+  grid: gap 20px;
+  border-radius: 3px;
+}
+
+.card-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  margin-bottom: 70px;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    height: 380px;
+  }
+  .btn {
+    font-size: 9px;
+  }
+}
+/*fin reservas*/
+/*grupos*/
+.grup {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(218, 214, 214);
+  font-family: "Montserrat", sans-serif;
+}
+
+.left {
+  background-position: center;
+  background-size: cover;
+  background-image: url(img/img.grupo.jpg);
+  width: 460px;
+  height: 330px;
+  margin-bottom: 35px;
+  margin-left: 10px;
+}
+
+h3 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+
+.dg {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-fluid-footer {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0%;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 320px) {
+  .left {
+    width: 300px;
+    height: 280px;
+  }
+  .dg {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+/*fin reservas*/
+/*contacto*/
+.form {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(218, 214, 214);
+}
+
+.contacto h4 {
+  background-color: rgb(218, 214, 214);
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 450px;
+  height: 200px;
+}
+
+.redes-container {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.b {
+  padding: 7px;
+  font-size: 35px;
+  border-radius: 5px;
+  justify-content: space-between;
+  background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+}
+
+@media screen and (max-width: 320px) {
+  #h {
+    width: 280px;
+  }
+  iframe {
+    width: 500px;
+    height: 200px;
+  }
+  .redes-container {
+    padding-bottom: 50px;
+  }
+}
+/*fin contacto*//*# sourceMappingURL=estilos.css.map */
