@@ -25,16 +25,18 @@ header {
   font-family: "Montserrat", sans-serif;
 }
 
+.navbar-toggler {
+  background-color: rgb(0, 0, 0);
+}
+
 .navbar-collapse {
   justify-content: end;
-  display: flex !important;
 }
 .navbar-collapse a:hover {
   color: #b69f9f !important;
 }
 
 .nav-item {
-  display: flex;
   align-items: flex-end;
 }
 
@@ -54,6 +56,12 @@ header {
   text-shadow: 5px 5px 5px rgb(145, 143, 143);
 }
 
+@media screen and (max-width: 320px) {
+  .bg-dark {
+    z-index: 9;
+    background-color: rgb(78, 73, 73);
+  }
+}
 /*fin barranav*/
 /*main*/
 main {
@@ -152,11 +160,21 @@ body {
   margin-top: 25px;
 }
 
+@media screen and (max-width: 320px) {
+  .h2 {
+    margin-top: 45px;
+  }
+}
 .p2 {
   display: flex;
   background-color: rgb(218, 214, 214);
 }
 
+@media screen and (max-width: 320px) {
+  .p2 {
+    font-size: 13px;
+  }
+}
 .contenedor {
   grid-gap: 10px;
   padding: auto;
@@ -236,6 +254,12 @@ body {
   margin-right: 18%;
 }
 
+@media screen and (max-width: 320px) {
+  .dest1 {
+    font-size: 25px;
+    margin-top: 55px;
+  }
+}
 .container mt-4 {
   background-color: rgb(132, 180, 164);
   padding-bottom: 20%;
@@ -304,6 +328,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+@media screen and (max-width: 320px) {
+  .grup {
+    margin-top: 45px;
+  }
+}
 .left {
   background-position: center;
   background-size: cover;

@@ -41,16 +41,21 @@ header {
 	font-size: 25px;
 }
 /*barranav inicia*/
-.navbar-brand {
+.navbar-brand
+ {  
+	
 	color: $color_1;
 	float: left;
 	padding: 20px;
 	font-family: $font-family_1;
 }
+.navbar-toggler{
+	background-color:$color_5;
+}
 
 .navbar-collapse {
 	justify-content: end;
-	display: flex !important;
+	
 	a {
 		&:hover {
 			color: $color_2 !important;
@@ -58,7 +63,6 @@ header {
 	}
 }
 .nav-item {
-	display: flex;
 	align-items: flex-end;
 }
 .nav-link {
@@ -74,6 +78,13 @@ header {
     font-size: $font-family_1;
     font-family: $font-family_1;
     text-shadow: 5px 5px 5px rgb(145, 143, 143)
+}
+@include mobile(){
+	.bg-dark{
+		z-index: 9;
+		background-color: rgb(78, 73, 73)
+		
+	}
 }
 /*fin barranav*/
 /*main*/
@@ -166,10 +177,22 @@ body {
 	margin-left: 20px;
 	margin-top: 25px;
 }
+@include mobile(){
+	 .h2 {margin-top: 45px;
+}
+}
+
 .p2 {
 	display: flex;
 	background-color: $background-color_3;
 }
+@include mobile(){
+	.p2{
+		font-size: 13px;
+	}
+}
+	
+
 .contenedor{
 	grid-gap: 10px;
 	padding: auto;
@@ -241,6 +264,12 @@ body {
 	padding-left: 10px;
 	margin-right: 18%;
 }
+@include mobile(){
+	.dest1{
+		font-size: 25px;
+		margin-top: 55px;
+	}
+}
 .container {
 	mt-4 {
 		background-color: $background-color_2;
@@ -268,6 +297,7 @@ body {
 	grid: gap 20px;
 	border-radius: 3px;
 }
+
 .card-title {
 	text-align: $text-align_1;
 	font-family: $font-family_2;
@@ -300,6 +330,11 @@ body {
 	color: $color_5;
 	background-color: $background-color_3;
 	font-family: $font-family_1;
+}
+@include mobile(){
+	.grup{
+		margin-top: 45px
+	}
 }
 .left {
     @include img;
