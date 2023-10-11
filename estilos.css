@@ -58,7 +58,7 @@ header {
 
 @media screen and (max-width: 320px) {
   .bg-dark {
-    z-index: 9;
+    z-index: 4;
     background-color: rgb(78, 73, 73);
   }
 }
@@ -277,6 +277,12 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 320px) {
+  h2 .rev {
+    font-size: 20px;
+    margin-top: 45px;
+  }
+}
 .card {
   background-position: center;
   background-size: cover;

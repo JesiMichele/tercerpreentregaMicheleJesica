@@ -49,6 +49,7 @@ header {
 	padding: 20px;
 	font-family: $font-family_1;
 }
+
 .navbar-toggler{
 	background-color:$color_5;
 }
@@ -81,7 +82,7 @@ header {
 }
 @include mobile(){
 	.bg-dark{
-		z-index: 9;
+		z-index: 4;
 		background-color: rgb(78, 73, 73)
 		
 	}
@@ -92,14 +93,15 @@ main {
     @include img;
 	background-image: url(img/img.faro.jpg);
 	height: 100vh;
-	
+
 }
 h1 {
 	text-align: $text-align_1;
 	padding-top: 20%;
 	font-family: $font-family_2;
 }
-p {
+	
+p{
 	text-align: $text-align_1;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -284,6 +286,14 @@ body {
 	background-color: $background-color_3;
 	font-family: $font-family_1;
 	text-align: $text-align_1;
+}
+@include mobile(){
+	h2 .rev{
+		font-size: $font-size_1;
+		margin-top: 45px
+		
+		
+	}
 }
 .card {
 	@include img;
